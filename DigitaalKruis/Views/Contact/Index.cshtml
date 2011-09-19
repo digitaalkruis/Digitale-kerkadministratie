@@ -1,0 +1,79 @@
+﻿@model IEnumerable<DigitaalKruis.Models.Contact>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>
+    Index</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            ContactID
+        </th>
+        <th>
+            FirstName
+        </th>
+        <th>
+            Prefix
+        </th>
+        <th>
+            LastName
+        </th>
+        <th>
+            Birthdate
+        </th>
+        <th>
+            EmailAddress
+        </th>
+        <th>
+            Phone
+        </th>
+        <th>
+            PasswordHash
+        </th>
+        <th>
+            PasswordSalt
+        </th>
+        <th>
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prefix)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Birthdate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PasswordHash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PasswordSalt)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ContactID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ContactID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ContactID })
+            </td>
+        </tr>
+    }
+</table>
