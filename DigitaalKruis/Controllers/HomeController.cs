@@ -11,7 +11,7 @@ namespace DigitaalKruis.Controllers
         public ActionResult Index()
         {
             ViewBag.Message = "Welcome to ASP.NET MVC!";
-
+            Console.WriteLine(ViewBag.Message);
             return View();
         }
 
