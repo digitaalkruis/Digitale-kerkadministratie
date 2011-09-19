@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitaalKruis", "DigitaalKruis\DigitaalKruis.csproj", "{79C56E97-2E81-45F6-94DF-0BEF27B452E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitaalKruis.Tests", "DigitaalKruis.Tests\DigitaalKruis.Tests.csproj", "{FC0362B4-667D-4850-98C1-AD742A513357}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79C56E97-2E81-45F6-94DF-0BEF27B452E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79C56E97-2E81-45F6-94DF-0BEF27B452E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79C56E97-2E81-45F6-94DF-0BEF27B452E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79C56E97-2E81-45F6-94DF-0BEF27B452E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC0362B4-667D-4850-98C1-AD742A513357}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC0362B4-667D-4850-98C1-AD742A513357}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC0362B4-667D-4850-98C1-AD742A513357}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC0362B4-667D-4850-98C1-AD742A513357}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
