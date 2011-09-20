@@ -1,2 +1,2 @@
-﻿@model DateTime
-@Html.TextBox("", Model.ToString("dd/MM/yyyy"), new { @class = "date" })
+﻿@model DateTime?
+@Html.TextBox("", (Model.HasValue ? Model.ToString() : null), new { @class = "data-datepicker" })

@@ -118,7 +118,8 @@ namespace DigitaalKruis.Models
         /// <param name="passwordHash">Initial value of the PasswordHash property.</param>
         /// <param name="passwordSalt">Initial value of the PasswordSalt property.</param>
         /// <param name="contactID">Initial value of the ContactID property.</param>
-        public static Contact CreateContact(global::System.String firstName, global::System.String lastName, global::System.String passwordHash, global::System.String passwordSalt, global::System.Int32 contactID)
+        /// <param name="gender">Initial value of the Gender property.</param>
+        public static Contact CreateContact(global::System.String firstName, global::System.String lastName, global::System.String passwordHash, global::System.String passwordSalt, global::System.Int32 contactID, global::System.String gender)
         {
             Contact contact = new Contact();
             contact.FirstName = firstName;
@@ -126,6 +127,7 @@ namespace DigitaalKruis.Models
             contact.PasswordHash = passwordHash;
             contact.PasswordSalt = passwordSalt;
             contact.ContactID = contactID;
+            contact.Gender = gender;
             return contact;
         }
 
@@ -350,6 +352,30 @@ namespace DigitaalKruis.Models
         private Nullable<global::System.DateTime> _Birthdate;
         partial void OnBirthdateChanging(Nullable<global::System.DateTime> value);
         partial void OnBirthdateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Gender
+        {
+            get
+            {
+                return _Gender;
+            }
+            set
+            {
+                OnGenderChanging(value);
+                ReportPropertyChanging("Gender");
+                _Gender = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Gender");
+                OnGenderChanged();
+            }
+        }
+        private global::System.String _Gender;
+        partial void OnGenderChanging(global::System.String value);
+        partial void OnGenderChanged();
 
         #endregion
     

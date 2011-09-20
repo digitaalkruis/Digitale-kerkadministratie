@@ -9,7 +9,15 @@ namespace DigitaalKruis.Models
 {
     [MetadataType(typeof(Contact_Validation))]
     public partial class Contact
-    { }
+    {
+        public enum GenderType
+        {
+            [Display(Name = "Male")]
+            M,
+            [Display(Name = "Female")]
+            F,
+        }
+    }
 
     public class Contact_Validation
     {
@@ -32,6 +40,10 @@ namespace DigitaalKruis.Models
         public string PasswordHash { get; set; }
 
         [Required]
+        [DataType(DataType.Password)]
         public string PasswordSalt { get; set; }
+
+        [Required]
+        public global::System.String Gender { get; set; }
     }
 }

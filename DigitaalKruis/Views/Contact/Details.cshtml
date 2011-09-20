@@ -13,7 +13,6 @@
         @Html.EditorFor(model => model.ContactID)
         @Html.ValidationMessageFor(model => model.ContactID)
     </div>
-
     <div class="display-label">
         FirstName</div>
     <div class="display-field">
@@ -53,6 +52,11 @@
         PasswordSalt</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.PasswordSalt)
+    </div>
+    <div class="display-label">
+        Gender</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Gender)
     </div>
 </fieldset>
 <p>

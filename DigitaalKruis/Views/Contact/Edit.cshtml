@@ -74,6 +74,15 @@
             @Html.EditorFor(model => model.PasswordSalt)
             @Html.ValidationMessageFor(model => model.PasswordSalt)
         </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Gender)
+        </div>
+        <div class="editor-field">
+            @Html.RadioButtonFor(model => model.Gender, DigitaalKruis.Models.Contact.GenderType.M)
+            Male
+            @Html.RadioButtonFor(model => model.Gender, DigitaalKruis.Models.Contact.GenderType.F)
+            Female
+        </div>
         @Html.HiddenFor(model => model.ContactID)
         <p>
             <input type="submit" value="Save" />
