@@ -1,2 +1,21 @@
 ﻿@model DateTime?
-@Html.TextBox("", (Model.HasValue ? Model.ToString() : null), new { @class = "data-datepicker" })
+@{
+    string dateTimeString = null;
+    if (Model.HasValue)
+    {
+        var datatypeName = (System.ComponentModel.DataAnnotations.DataType)Enum.Parse(typeof(System.ComponentModel.DataAnnotations.DataType), ViewData.ModelMetadata.DataTypeName);
+        switch (datatypeName)
+        {
+            case System.ComponentModel.DataAnnotations.DataType.Date:
+                dateTimeString = Model.Value.ToShortDateString();
+                break;
+            case System.ComponentModel.DataAnnotations.DataType.DateTime:
+                dateTimeString = Model.Value.ToShortTimeString();
+                break;
+            case System.ComponentModel.DataAnnotations.DataType.Time:
+                dateTimeString = Model.Value.ToString();
+                break;
+        }
+    }
+    @Html.TextBox("", dateTimeString, new { @class = "datepicker" })
+}

@@ -57,7 +57,7 @@ namespace DigitaalKruis.Controllers
         
         //
         // GET: /Contact/Edit/5
- 
+
         public ActionResult Edit(int id)
         {
             Contact contact = db.Contacts.SingleOrDefault(c => c.ContactID == id);
